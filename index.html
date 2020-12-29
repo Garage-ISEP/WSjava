@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Workshop Java</title>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <h1>Workshop Git</h1>
+      </div>
+    </div>
+  </nav>
+  <section class="hero is-warning">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Java ou Java pas
+        </h1>
+        <h2 class="subtitle">
+          Workshop 1
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content">
+          <p class="title">Java FX</p>
+          <p class="subtitle">Comment faire pour que eclipse reconnaisse que j'utilise Java FX et donc comment faire pour faire marcher Java FX</p>
+          <h3>Pourquoi utiliser Java FX par rapport à Swing ?</h3>
+            <p>
+                Nous avons fait le <b>choix</b> de vous présenter cette extension plutôt que l'autre. Théoriquement elles marchent bien toutes les deux. Cependant, jfx (java FX) est, nous pensons, plus facile à prendre en main car plus récente.
+            </p>
+          <h1>Installer JavaFX</h1>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Installer e(fx)clipse</h3>
+              <p>Pour ce la il faut que vous ouvrez eclipse puis que vous alliez dans : <b>Help>Eclipse Marketplace..</b></p>
+              <img src="images/Help.png"/>
+              <p>Ensuite dans la barre de menu il faut taper <b>"javafx"</b> puis appuyer sur entrée. Il vous suffit de cliquer ensuite sur installer et d'attendre que le téléchargemetn se termine pour relancer eclipse.
+              <p style="color: red">⚠️<b>La progression du téléchargement se trouve en bas à droite de la fenêtre principale et il ne faut pas fermer eclipse avant la fin.</b></p>
+              <img src="images/Marketplace.png"/>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>Faire Fonctionner Java FX</h3>
+              <p>Vous aviez quand même pas cru qu'il suffisait d'installer jfx (je vous rassure on est tous passé par là).</p>
+              <p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a href="https://gluonhq.com/products/javafx/">fichiers jars</a> (la version 11 marche bien)</p>
+              <P>Ensuite il faut spécifier à votre ide que vous comptez utiliser ces jars. Pour cela il faut faire clique droit sur le dossier de votre projet et cliquer sur <b>build path>Configure Build Path</b></P>
+              <img src="images/Build_Path.png"/>
+              <p>Allez ensuite dans l'onglet <b>"Libraries"</b> et sélectionnez <b>"ModulePath"</b> puis cliquez sur <b>"add External Jars"</b></p>
+              <img src="images/Modulepath.png"/>
+              <p>Allez dans le dossier que vous avez téléchargé et dézippé (<b>"java-sdk-11.02"</b> par exemple) puis dans <b>"lib"</b> et sélectionnez tous les jars</p>
+              <img src="images/jars.png"/>
+              <p>C'est bon, vous avez finis et pouvez maintenant utiliser jfx sans soucis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Scene Builder</p>
+          <p class="subtitle">Parce que coder c'est long et faut apprendre le langage</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Installer Scene Builder</h3>
+              <p>Promis c'est plus simple que pour jfx. Vous pouvez directement le télécharger sur ce <a href="https://gluonhq.com/products/scene-builder/">lien</a>.</p>
+              <p>Par contre faut spécifier à eclipse où se trouve cette application extérieure si vous voulez l'utiliser rapidement (j'ai dis que c'était plus simple pas facile). Pour ce faire il faut aller dans <b>Window>Preferences</b></p>
+              <img src="images/preferences.png"/>
+              <p>Cliquer ensuite sur l'onglet JavaFX et chercher l'endroit où vous avez installer Scene Builder</p>
+              <img src="images/path_sceneBuilder.png"
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.navbar {
+    background-color: black;
+    color: white;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
