@@ -56,6 +56,8 @@
               <p>Vous aviez quand même pas cru qu'il suffisait d'installer jfx (je vous rassure on est tous passé par là).</p>
               <p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a href="https://gluonhq.com/products/javafx/">fichiers jars</a> (la version 11 marche bien)</p>
               <P>Ensuite il faut spécifier à votre ide que vous comptez utiliser ces jars. Pour cela il faut faire clique droit sur le dossier de votre projet et cliquer sur <b>build path>Configure Build Path</b></P>
+              <p style="color: red">Vous verrez dans la partie pratique (plus loin) comment créer un projet jfx. </p>
+              <p style="color: red">⚠️<b>Il faut faire la suite de cette partie pour chaques projets javafx</b>⚠️</p>
               <img src="images/Build_Path.png"/>
               <p>Allez ensuite dans l'onglet <b>"Libraries"</b> et sélectionnez <b>"ModulePath"</b> puis cliquez sur <b>"add External Jars"</b></p>
               <img src="images/Modulepath.png"/>
@@ -96,7 +98,107 @@
               <p>Par contre faut spécifier à eclipse où se trouve cette application extérieure si vous voulez l'utiliser rapidement (j'ai dis que c'était plus simple pas facile). Pour ce faire il faut aller dans <b>Window>Preferences</b></p>
               <img src="images/preferences.png"/>
               <p>Cliquer ensuite sur l'onglet JavaFX et chercher l'endroit où vous avez installer Scene Builder</p>
-              <img src="images/path_sceneBuilder.png"
+              <img src="images/path_sceneBuilder.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Partie Pratique</p>
+          <p class="subtitle">Pour comprendre un peu plus comment ça marche</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Créer un projet jfx</h3>
+              <p>Il faut aller dans <b>File>new>Project...</b></p>
+              <p>Puis aller dans le dossier <b>JavaFX</b> et séléctionner <b>JavaFX Project</b>.</p>
+              <img src="images/new_project1.png"/>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>Créer un fichier fxml</h3>
+              <p>Il faut faire un clique droit sur le dossier dans lequel on souhaite le mettre puis faire <b>New>Others...</b></p>
+              <p>Une fenêtre souvre et il faut aller dans le dossier javaFX et choisir <b>New FXML Document</b></p>
+              <img src="images/new_FXML.png"/>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>Ouvrir Scene Builder</h3>
+              <p>Il existe deux méthodes: La première est d'ouvrir scene builder depuis l'endroit où vous l'avez installer puis d'ouvrir le fichier souhaité. La seconde est de faire clique droit sur le fichier fxml et de cliquer sur <b>Open with SceneBuilder</b></p>
+              <img src="images/open_scenebuilder.png"/>
+              <p><b>Lorsque vous enregistrez sous Scene Builder, le code du fichier FXML est mis à jour</b></p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+            <div class="content">
+              <h3>Lier le controller au fichier fxml</h3>
+              <p>La méthode la plus facile est de le faire via Scene Builder (même si en soit il ne rajoute que <code>fx:controller="application.MainController"</code>). Tout en bas à gauche un il y a menu déroulant <b>controller</b> et indiquer dans "Controller class" : <b>"nom_du_dossier"."nom_de_la_classe"</b>. Dans notre cas on aura : "application.MainController"</p>
+              <p style="color: red"><b>⚠️ N'oubliez pas d'enregistrer</b></p>
+              <img src="images/lier_controller.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin: 30px auto;">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent box">
+        <div class="content" style="width: 100%;">
+          <p class="title">Partie code</p>
+          <p class="subtitle">Le code important de base</p>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Le fichier Main.java</h3>
+              <p>Votre package et le nom de vos fichiers peuvent être différents mais voici le code pour lire votre fichier fxml et css et lancer votre fenêtre</p>
+              <p><pre><code>
+                package application;
+	
+                import javafx.application.Application;
+                import javafx.fxml.FXMLLoader;
+                import javafx.scene.Parent;
+                import javafx.scene.Scene;
+                import javafx.stage.Stage;
+
+                public class Main extends Application {
+
+                @Override
+                public void start(Stage primaryStage) throws Exception {
+                  Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+
+                  Scene Mainscene = new Scene(root);
+                  Mainscene.getStylesheets().add(getClass().getResource("application.css").toString());
+
+                  primaryStage.setScene(Mainscene);
+                  primaryStage.show();
+                }
+                  
+                public static void main(String[] args) {
+                  launch(args);
+                }
+              }
+              </code></pre></p>
+            </div>
+          </div>
+          <div class="tile is-child box is-vertical">
+            <div class="content">
+              <h3>Le fichier MainController.java</h3>
+              <p>N'oubliez pas de lier votre controller au fichier fxml en rajoutant <code>fx:controller="application.MainController"</code> si votre package s'appelle <b>application</b></p>
+              <p>Je ne vous met pas les imports, mais eclipse n'aura aucun mal à vous les trouver. Vous n'avez pas besoin de mettre quelque chose dans la méthode initialize</p>
+              <p><pre><code>
+                public class MainController implements Initializable{
+                  @Override
+                  public void initialize(URL arg0, ResourceBundle arg1){
+                    /**Initialisation du projet */
+                  }
+                }
+              </code></pre></p>
             </div>
           </div>
         </div>
