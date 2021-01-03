@@ -61,7 +61,22 @@
               <img src="images/Modulepath.png"/>
               <p>Allez dans le dossier que vous avez téléchargé et dézippé (<b>"java-sdk-11.02"</b> par exemple) puis dans <b>"lib"</b> et sélectionnez tous les jars</p>
               <img src="images/jars.png"/>
-              <p>C'est bon, vous avez finis et pouvez maintenant utiliser jfx sans soucis.</p>
+              <p>Maintenant il va vous falloir créer un fichier module-info.java. Pour ce faire faites clique droit sur votre dossier porjet <b>configure>create module-info.java</b></p>
+              <img src="images/module-info.png"/>
+              <p>Pas la peine de changer le nom du module, gardez le par défaut. En suite remplacer ce qu'il y a entre les accolades par ce code 
+                <pre><code>
+                  module Test {
+                    requires javafx.controls;
+                    requires javafx.fxml;
+                    
+                    requires transitive javafx.base;
+                    requires transitive javafx.graphics;
+                    
+                    opens application to javafx.fxml;
+                    exports application to javafx.graphics;
+                  }
+                </code></pre>
+              </p>
             </div>
           </div>
         </div>
