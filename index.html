@@ -54,7 +54,7 @@
             <div class="content">
               <h3>Faire Fonctionner Java FX</h3>
               <p>Vous aviez quand même pas cru qu'il suffisait d'installer jfx (je vous rassure on est tous passé par là).</p>
-              <p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a href="https://gluonhq.com/products/javafx/">fichiers jars</a> (la version 11 marche bien)</p>
+              <p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a href="https://gluonhq.com/products/javafx/">fichiers jars sdk</a> (la version 11 marche bien)</p>
               <P>Ensuite il faut spécifier à votre ide que vous comptez utiliser ces jars. Pour cela il faut faire clique droit sur le dossier de votre projet et cliquer sur <b>build path>Configure Build Path</b></P>
               <p style="color: red">Vous verrez dans la partie pratique (plus loin) comment créer un projet jfx. </p>
               <p style="color: red">⚠️<b>Il faut faire la suite de cette partie pour chaques projets javafx</b>⚠️</p>
@@ -122,7 +122,7 @@
           <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
             <div class="content">
               <h3>Créer un fichier fxml</h3>
-              <p>Il faut faire un clique droit sur le dossier dans lequel on souhaite le mettre puis faire <b>New>Others...</b></p>
+              <p>Il faut faire un clique droit sur le dossier dans lequel on souhaite le mettre (le mieux c'est de le mettre dans le dossier application avec les autres fichiers) puis faire <b>New>Others...</b></p>
               <p>Une fenêtre souvre et il faut aller dans le dossier javaFX et choisir <b>New FXML Document</b></p>
               <img src="images/new_FXML.png"/>
             </div>
@@ -186,7 +186,7 @@
               </code></pre></p>
             </div>
           </div>
-          <div class="tile is-child box is-vertical">
+          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
             <div class="content">
               <h3>Le fichier MainController.java</h3>
               <p>N'oubliez pas de lier votre controller au fichier fxml en rajoutant <code>fx:controller="application.MainController"</code> si votre package s'appelle <b>application</b></p>
