@@ -190,8 +190,15 @@
             <div class="content">
               <h3>Le fichier MainController.java</h3>
               <p>N'oubliez pas de lier votre controller au fichier fxml en rajoutant <code>fx:controller="application.MainController"</code> si votre package s'appelle <b>application</b></p>
-              <p>Je ne vous met pas les imports, mais eclipse n'aura aucun mal à vous les trouver. Vous n'avez pas besoin de mettre quelque chose dans la méthode initialize</p>
+              <p>Vous n'avez pas besoin de mettre quelque chose dans la méthode initialize</p>
               <p><pre><code>
+                package application;
+
+                import java.net.URL;
+                import java.util.ResourceBundle;
+                import javafx.fxml.FXML;
+                import javafx.fxml.Initializable;
+
                 public class MainController implements Initializable{
                   @Override
                   public void initialize(URL arg0, ResourceBundle arg1){
