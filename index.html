@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  <link rel="stylesheet" href="./style.css">
-  <title>Workshop Java</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<link rel="stylesheet" href="./style.css">
+	<title>Workshop Java</title>
 </head>
+
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <h1>Workshop Java</h1>
-      </div>
-    </div>
-  </nav>
-  <section class="hero is-warning">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Java ou Java pas
-        </h1>
-        <h2 class="subtitle">
-          Workshop 1
-        </h2>
-      </div>
-    </div>
-  </section>
-  <div class="container" style="margin: 30px auto;">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent box">
-        <div class="content">
-          <p class="title">Java FX</p>
-          <p class="subtitle">Comment faire pour que eclipse reconnaisse que j'utilise Java FX et donc comment faire pour faire marcher Java FX</p>
-          <h3>Pourquoi utiliser Java FX par rapport à Swing ?</h3>
-            <p>
-                Nous avons fait le <b>choix</b> de vous présenter cette extension plutôt que l'autre. Théoriquement elles marchent bien toutes les deux. Cependant, jfx (java FX) est, nous pensons, plus facile à prendre en main car plus récente.
-            </p>
-          <h1>Installer JavaFX</h1>
-          <div class="tile is-child box is-vertical">
-            <div class="content">
-              <h3>Installer e(fx)clipse</h3>
-              <p>Pour cela il faut ouvrir eclipse puis que vous alliez dans : <b>Help>Eclipse Marketplace..</b></p>
-              <img src="images/Help.png"/>
-              <p>Ensuite dans la barre de menu il faut taper <b>"javafx"</b> puis appuyer sur entrée. Il vous suffit de cliquer ensuite sur installer et d'attendre que le téléchargemetn se termine pour relancer eclipse.
-              <p style="color: red">⚠️<b>La progression du téléchargement se trouve en bas à droite de la fenêtre principale et il ne faut pas fermer eclipse avant la fin.</b></p>
-              <img src="images/Marketplace.png"/>
-            </div>
-          </div>
-          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
-            <div class="content">
-              <h3>Faire Fonctionner Java FX</h3>
-              <p>Vous aviez quand même pas cru qu'il suffisait d'installer jfx (je vous rassure on est tous passé par là).</p>
-              <p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a href="https://gluonhq.com/products/javafx/">fichiers jars sdk</a> (la version 11 marche bien)</p>
-              <P>Ensuite il faut spécifier à votre ide que vous comptez utiliser ces jars. Pour cela il faut faire clique droit sur le dossier de votre projet et cliquer sur <b>build path>Configure Build Path</b></P>
-              <p style="color: red">Vous verrez dans la partie pratique (plus loin) comment créer un projet jfx. </p>
-              <p style="color: red">⚠️<b>Il faut faire la suite de cette partie pour chaques projets javafx</b>⚠️</p>
-              <img src="images/Build_Path.png"/>
-              <p>Allez ensuite dans l'onglet <b>"Libraries"</b> et sélectionnez <b>"ModulePath"</b> puis cliquez sur <b>"add External Jars"</b></p>
-              <img src="images/Modulepath.png"/>
-              <p>Allez dans le dossier que vous avez téléchargé et dézippé (<b>"java-sdk-11.02"</b> par exemple) puis dans <b>"lib"</b> et sélectionnez tous les jars</p>
-              <img src="images/jars.png"/>
-              <p>Maintenant il va vous falloir créer un fichier module-info.java. Pour ce faire faites clique droit sur votre dossier porjet <b>configure>create module-info.java</b></p>
-              <img src="images/module-info.png"/>
-              <p>Pas la peine de changer le nom du module, gardez le par défaut. En suite remplacer ce qu'il y a entre les accolades par ce code 
-                <pre><code>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div class="container">
+			<div class="navbar-brand">
+				<h1>Workshop Java</h1>
+			</div>
+			<div class="navbar-menu navbar-end">
+				<p style="display: flex; align-items: center;">Auteurs: Théodore Prévot & Quentin Dexemple</p>
+			</div>
+		</div>
+	</nav>
+	<section class="hero is-warning">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					Jeu d'échecs
+				</h1>
+			</div>
+		</div>
+	</section>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content">
+					<p class="title">Ressources</p>
+					<div class="content is-medium" style="padding-left: 15px;">
+						<li><a href="./assets.zip">Assets pour le jeu d'echecs: assets.zip</a></li>
+						<li><a href="https://github.com/garage-isep/wschess" target="_blank">Correction du jeu d'échecs (Github)</a></li>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content">
+					<p class="title">Objectif</p>
+					<div class="content is-medium">
+						<div style="display: flex;">
+							<img style="max-height: 350px; width: auto; margin-left: 25px" src="./images/chess-final.png" alt="">
+							<img style="max-height: 350px; width: auto; margin-left: 25px" src="./images/chess-final-move.png" alt="">
+						</div>
+						<div style="padding-left: 15px; margin-top: 25px;">
+							<li>Déplacement des pièces</li>
+							<li>Indiquation des coups possibles</li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section class="hero is-warning">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					Java ou Java pas
+				</h1>
+			</div>
+		</div>
+	</section>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content">
+					<p class="title">Java FX</p>
+					<p class="subtitle">Comment faire pour que eclipse reconnaisse que j'utilise Java FX et donc comment faire
+						pour faire marcher Java FX</p>
+					<h3>Pourquoi utiliser Java FX par rapport à Swing ?</h3>
+					<p>
+						Nous avons fait le <b>choix</b> de vous présenter cette extension plutôt que l'autre. Théoriquement elles
+						marchent bien toutes les deux. Cependant, jfx (java FX) est, nous pensons, plus facile à prendre en main car
+						plus récente.
+					</p>
+					<h1>Installer JavaFX</h1>
+					<div class="tile is-child box is-vertical">
+						<div class="content">
+							<h3>Installer e(fx)clipse</h3>
+							<p>Pour cela il faut ouvrir eclipse puis que vous alliez dans : <b>Help>Eclipse Marketplace..</b></p>
+							<img src="images/Help.png" />
+							<p>Ensuite dans la barre de menu il faut taper <b>"javafx"</b> puis appuyer sur entrée. Il vous suffit de
+								cliquer ensuite sur installer et d'attendre que le téléchargemetn se termine pour relancer eclipse.
+							<p style="color: red">⚠️<b>La progression du téléchargement se trouve en bas à droite de la fenêtre
+									principale et il ne faut pas fermer eclipse avant la fin.</b></p>
+							<img src="images/Marketplace.png" />
+						</div>
+					</div>
+					<div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+						<div class="content">
+							<h3>Faire Fonctionner Java FX</h3>
+							<p>Vous aviez quand même pas cru qu'il suffisait d'installer jfx (je vous rassure on est tous passé par
+								là).</p>
+							<p> Ce qu'il vous reste à faire maintenant c'est de télécharger les <a
+									href="https://gluonhq.com/products/javafx/">fichiers jars sdk</a> (la version 11 marche bien)</p>
+							<P>Ensuite il faut spécifier à votre ide que vous comptez utiliser ces jars. Pour cela il faut faire
+								clique droit sur le dossier de votre projet et cliquer sur <b>build path>Configure Build Path</b></P>
+							<p style="color: red">Vous verrez dans la partie pratique (plus loin) comment créer un projet jfx. </p>
+							<p style="color: red">⚠️<b>Il faut faire la suite de cette partie pour chaques projets javafx</b>⚠️</p>
+							<img src="images/Build_Path.png" />
+							<p>Allez ensuite dans l'onglet <b>"Libraries"</b> et sélectionnez <b>"ModulePath"</b> puis cliquez sur
+								<b>"add External Jars"</b>
+							</p>
+							<img src="images/Modulepath.png" />
+							<p>Allez dans le dossier que vous avez téléchargé et dézippé (<b>"java-sdk-11.02"</b> par exemple) puis
+								dans <b>"lib"</b> et sélectionnez tous les jars</p>
+							<img src="images/jars.png" />
+							<p>Maintenant il va vous falloir créer un fichier module-info.java. Pour ce faire faites clique droit sur
+								votre dossier porjet <b>configure>create module-info.java</b></p>
+							<img src="images/module-info.png" />
+							<p>Pas la peine de changer le nom du module, gardez le par défaut. En suite remplacer ce qu'il y a entre
+								les accolades par ce code
+							<pre><code>
                   module Test {
                     requires javafx.controls;
                     requires javafx.fxml;
@@ -78,86 +135,99 @@
                     exports application to javafx.graphics;
                   }
                 </code></pre>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container" style="margin: 30px auto;">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent box">
-        <div class="content" style="width: 100%;">
-          <p class="title">Scene Builder</p>
-          <p class="subtitle">Parce que coder c'est long et faut apprendre le langage</p>
-          <div class="tile is-child box is-vertical">
-            <div class="content">
-              <h3>Installer Scene Builder</h3>
-              <p>Promis c'est plus simple que pour jfx. Vous pouvez directement le télécharger sur ce <a href="https://gluonhq.com/products/scene-builder/">lien</a>.</p>
-              <p>Par contre faut spécifier à eclipse où se trouve cette application extérieure si vous voulez l'utiliser rapidement (j'ai dis que c'était plus simple pas facile). Pour ce faire il faut aller dans <b>Window>Preferences</b></p>
-              <img src="images/preferences.png"/>
-              <p>Cliquer ensuite sur l'onglet JavaFX et chercher l'endroit où vous avez installer Scene Builder</p>
-              <img src="images/path_sceneBuilder.png"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container" style="margin: 30px auto;">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent box">
-        <div class="content" style="width: 100%;">
-          <p class="title">Partie Pratique</p>
-          <p class="subtitle">Pour comprendre un peu plus comment ça marche</p>
-          <div class="tile is-child box is-vertical">
-            <div class="content">
-              <h3>Créer un projet jfx</h3>
-              <p>Il faut aller dans <b>File>new>Project...</b></p>
-              <p>Puis aller dans le dossier <b>JavaFX</b> et séléctionner <b>JavaFX Project</b>.</p>
-              <img src="images/new_project1.png"/>
-            </div>
-          </div>
-          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
-            <div class="content">
-              <h3>Créer un fichier fxml</h3>
-              <p>Il faut faire un clique droit sur le dossier dans lequel on souhaite le mettre (le mieux c'est de le mettre dans le dossier application avec les autres fichiers) puis faire <b>New>Others...</b></p>
-              <p>Une fenêtre souvre et il faut aller dans le dossier javaFX et choisir <b>New FXML Document</b></p>
-              <img src="images/new_FXML.png"/>
-            </div>
-          </div>
-          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
-            <div class="content">
-              <h3>Ouvrir Scene Builder</h3>
-              <p>Il existe deux méthodes: La première est d'ouvrir scene builder depuis l'endroit où vous l'avez installer puis d'ouvrir le fichier souhaité. La seconde est de faire clique droit sur le fichier fxml et de cliquer sur <b>Open with SceneBuilder</b></p>
-              <img src="images/open_scenebuilder.png"/>
-              <p><b>Lorsque vous enregistrez sous Scene Builder, le code du fichier FXML est mis à jour</b></p>
-            </div>
-          </div>
-          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
-            <div class="content">
-              <h3>Lier le controller au fichier fxml</h3>
-              <p>La méthode la plus facile est de le faire via Scene Builder (même si en soit il ne rajoute que <code>fx:controller="application.MainController"</code>). Tout en bas à gauche un il y a menu déroulant <b>controller</b> et indiquer dans "Controller class" : <b>"nom_du_dossier"."nom_de_la_classe"</b>. Dans notre cas on aura : "application.MainController"</p>
-              <p style="color: red"><b>⚠️ N'oubliez pas d'enregistrer</b></p>
-              <img src="images/lier_controller.png"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container" style="margin: 30px auto;">
-    <div class="tile is-ancestor">
-      <div class="tile is-parent box">
-        <div class="content" style="width: 100%;">
-          <p class="title">Partie code</p>
-          <p class="subtitle">Le code important de base</p>
-          <div class="tile is-child box is-vertical">
-            <div class="content">
-              <h3>Le fichier Main.java</h3>
-              <p>Votre package et le nom de vos fichiers peuvent être différents mais voici le code pour lire votre fichier fxml et css et lancer votre fenêtre</p>
-              <p><pre><code>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content" style="width: 100%;">
+					<p class="title">Scene Builder</p>
+					<p class="subtitle">Parce que coder c'est long et faut apprendre le langage</p>
+					<div class="tile is-child box is-vertical">
+						<div class="content">
+							<h3>Installer Scene Builder</h3>
+							<p>Promis c'est plus simple que pour jfx. Vous pouvez directement le télécharger sur ce <a
+									href="https://gluonhq.com/products/scene-builder/">lien</a>.</p>
+							<p>Par contre faut spécifier à eclipse où se trouve cette application extérieure si vous voulez l'utiliser
+								rapidement (j'ai dis que c'était plus simple pas facile). Pour ce faire il faut aller dans
+								<b>Window>Preferences</b>
+							</p>
+							<img src="images/preferences.png" />
+							<p>Cliquer ensuite sur l'onglet JavaFX et chercher l'endroit où vous avez installer Scene Builder</p>
+							<img src="images/path_sceneBuilder.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content" style="width: 100%;">
+					<p class="title">Partie Pratique</p>
+					<p class="subtitle">Pour comprendre un peu plus comment ça marche</p>
+					<div class="tile is-child box is-vertical">
+						<div class="content">
+							<h3>Créer un projet jfx</h3>
+							<p>Il faut aller dans <b>File>new>Project...</b></p>
+							<p>Puis aller dans le dossier <b>JavaFX</b> et séléctionner <b>JavaFX Project</b>.</p>
+							<img src="images/new_project1.png" />
+						</div>
+					</div>
+					<div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+						<div class="content">
+							<h3>Créer un fichier fxml</h3>
+							<p>Il faut faire un clique droit sur le dossier dans lequel on souhaite le mettre (le mieux c'est de le
+								mettre dans le dossier application avec les autres fichiers) puis faire <b>New>Others...</b></p>
+							<p>Une fenêtre souvre et il faut aller dans le dossier javaFX et choisir <b>New FXML Document</b></p>
+							<img src="images/new_FXML.png" />
+						</div>
+					</div>
+					<div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+						<div class="content">
+							<h3>Ouvrir Scene Builder</h3>
+							<p>Il existe deux méthodes: La première est d'ouvrir scene builder depuis l'endroit où vous l'avez
+								installer puis d'ouvrir le fichier souhaité. La seconde est de faire clique droit sur le fichier fxml et
+								de cliquer sur <b>Open with SceneBuilder</b></p>
+							<img src="images/open_scenebuilder.png" />
+							<p><b>Lorsque vous enregistrez sous Scene Builder, le code du fichier FXML est mis à jour</b></p>
+						</div>
+					</div>
+					<div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+						<div class="content">
+							<h3>Lier le controller au fichier fxml</h3>
+							<p>La méthode la plus facile est de le faire via Scene Builder (même si en soit il ne rajoute que
+								<code>fx:controller="application.MainController"</code>). Tout en bas à gauche un il y a menu déroulant
+								<b>controller</b> et indiquer dans "Controller class" : <b>"nom_du_dossier"."nom_de_la_classe"</b>. Dans
+								notre cas on aura : "application.MainController"
+							</p>
+							<p style="color: red"><b>⚠️ N'oubliez pas d'enregistrer</b></p>
+							<img src="images/lier_controller.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin: 30px auto;">
+		<div class="tile is-ancestor">
+			<div class="tile is-parent box">
+				<div class="content" style="width: 100%;">
+					<p class="title">Partie code</p>
+					<p class="subtitle">Le code important de base</p>
+					<div class="tile is-child box is-vertical">
+						<div class="content">
+							<h3>Le fichier Main.java</h3>
+							<p>Votre package et le nom de vos fichiers peuvent être différents mais voici le code pour lire votre
+								fichier fxml et css et lancer votre fenêtre</p>
+							<p>
+							<pre><code>
                 package application;
 	
                 import javafx.application.Application;
@@ -183,15 +253,19 @@
                   launch(args);
                 }
               }
-              </code></pre></p>
-            </div>
-          </div>
-          <div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
-            <div class="content">
-              <h3>Le fichier MainController.java</h3>
-              <p>N'oubliez pas de lier votre controller au fichier fxml en rajoutant <code>fx:controller="application.MainController"</code> si votre package s'appelle <b>application</b></p>
-              <p>Vous n'avez pas besoin de mettre quelque chose dans la méthode initialize</p>
-              <p><pre><code>
+              </code></pre>
+							</p>
+						</div>
+					</div>
+					<div class="tile is-child box is-vertical" style="margin-top: 20px !important;">
+						<div class="content">
+							<h3>Le fichier MainController.java</h3>
+							<p>N'oubliez pas de lier votre controller au fichier fxml en rajoutant
+								<code>fx:controller="application.MainController"</code> si votre package s'appelle <b>application</b>
+							</p>
+							<p>Vous n'avez pas besoin de mettre quelque chose dans la méthode initialize</p>
+							<p>
+							<pre><code>
                 package application;
 
                 import java.net.URL;
@@ -205,12 +279,14 @@
                     /**Initialisation du projet */
                   }
                 }
-              </code></pre></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+              </code></pre>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
+
 </html>
